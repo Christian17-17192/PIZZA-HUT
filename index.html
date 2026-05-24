@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pizza Hut</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <!-- LOADER -->
+
+    <div id="loader">
+
+        <div class="spinner"></div>
+        <h2>Loading Pizza...</h2>
+
+    </div>
+
+    <!-- HEADER -->
+
+    <header id="navbar">
+
+        <div class="logo">
+            🍕 Pizza Hut
+        </div>
+
+        <nav>
+
+            <a href="#home">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#offers">Offers</a>
+            <a href="#about">About</a>
+
+        </nav>
+
+    </header>
+
+    <!-- HERO -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-text" data-aos="fade-right">
+
+            <h1>
+                Freshly Baked,<br>
+                Perfectly Cheesy
+            </h1>
+
+            <p>
+                Enjoy delicious pizzas with premium ingredients
+                and unforgettable flavor.
+            </p>
+
+            <div class="buttons">
+
+                <button class="btn-red" onclick="openModal()">
+                    Order Now
+                </button>
+
+                <button class="btn-light">
+                    View Menu
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="hero-image" data-aos="fade-left">
+
+            <img src="delicious pizza.png" alt="Delicious pizza">
+
+        </div>
+
+    </section>
+
+    <!-- BEST SELLERS -->
+
+    <section class="best" id="offers">
+
+        <h2 data-aos="fade-up">
+            Our Best Sellers
+        </h2>
+
+        <div class="cards">
+
+            <div class="card" data-aos="zoom-in">
+
+                <img src="pepperoni pizza.png" alt="Pepperoni pizza">
+
+                <h3>Pepperoni Pizza</h3>
+
+                <p>$12.99</p>
+
+                <button onclick="openModal()">
+                    Order
+                </button>
+
+            </div>
+
+            <div class="card" data-aos="zoom-in">
+
+                <img src="cheese pizza.png" alt="Cheese pizza">
+
+                <h3>Cheese Pizza</h3>
+
+                <p>$10.99</p>
+
+                <button onclick="openModal()">
+                    Order
+                </button>
+
+            </div>
+
+            <div class="card" data-aos="zoom-in">
+
+                <img src="supreme pizza.png" alt="Supreme Pizza">
+
+                <h3>Supreme Pizza</h3>
+
+                <p>$15.99</p>
+
+                <button onclick="openModal()">
+                    Order
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- MENU -->
+
+    <section class="menu" id="menu">
+
+        <h2 data-aos="fade-up">
+            Choose Our Menu
+        </h2>
+
+        <div class="menu-list">
+
+            <!-- ITEM 1 -->
+
+            <div class="menu-card" data-aos="fade-right">
+
+                <img src="chicken pizza.png" alt="Chicken Pizza">
+
+                <div class="menu-info">
+
+                    <h3>Chicken Pizza</h3>
+
+                    <p>
+                        Loaded with chicken, cheese and fresh toppings.
+                    </p>
+
+                </div>
+
+                <button>$11</button>
+
+            </div>
+
+            <!-- ITEM 2 -->
+
+            <div class="menu-card" data-aos="fade-left">
+
+                <img src="veggie pizza.png" alt="Veggie Pizza">
+
+                <div class="menu-info">
+
+                    <h3>Veggie Pizza</h3>
+
+                    <p>
+                        Healthy veggie pizza with premium cheese.
+                    </p>
+
+                </div>
+
+                <button>$9</button>
+
+            </div>
+
+            <!-- ITEM 3 -->
+
+            <div class="menu-card" data-aos="fade-right">
+
+                <img src="italian pizza.png" alt="Italian Pizza">
+
+                <div class="menu-info">
+
+                    <h3>Italian Pizza</h3>
+
+                    <p>
+                        Authentic Italian flavor with rich sauce.
+                    </p>
+
+                </div>
+
+                <button>$14</button>
+
+            </div>
+
+            <!-- ITEM 4 -->
+
+            <div class="menu-card" data-aos="fade-left">
+
+                <img src="spicy pizza.png" alt="Spicy Pizza">
+
+                <div class="menu-info">
+
+                    <h3>Spicy Pizza</h3>
+
+                    <p>
+                        Spicy pepperoni and extra melted cheese.
+                    </p>
+
+                </div>
+
+                <button>$13</button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ABOUT -->
+
+    <section class="about" id="about">
+
+        <div class="about-box" data-aos="flip-left">
+
+            <h3>Fast Delivery</h3>
+
+            <p>
+                Hot and fresh pizza delivered quickly.
+            </p>
+
+        </div>
+
+        <div class="about-box" data-aos="flip-left">
+
+            <h3>Premium Cheese</h3>
+
+            <p>
+                Made with high quality ingredients.
+            </p>
+
+        </div>
+
+        <div class="about-box" data-aos="flip-left">
+
+            <h3>Best Taste</h3>
+
+            <p>
+                Enjoy authentic Italian flavor.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- ORDER MODAL -->
+
+    <div class="modal" id="orderModal">
+
+        <div class="modal-content">
+
+            <span class="close" onclick="closeModal()">
+                &times;
+            </span>
+
+            <h2>Order Pizza</h2>
+
+            <input type="text" placeholder="Your Name">
+
+            <input type="text" placeholder="Pizza Type">
+
+            <input type="text" placeholder="Address">
+
+            <button class="btn-red submit-btn">
+                Submit Order
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 Pizza Hut Website | School Project
+        </p>
+
+    </footer>
+
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+
+</body>
+</html>
